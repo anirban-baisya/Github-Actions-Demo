@@ -1,0 +1,19 @@
+name: 'sample pipeline'  #giving name to the pipeline
+
+on:     
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  sampleJob: #defining name of the job
+    runs-on: ubuntu-latest #defining OS and run the pipeline on ubuntu-latest
+    steps:
+    - name: 'Print Hello World' #name of the step
+      # uses: actions/checkout@v2
+      runs: echo 'hello world'
+
+    - name: 'Print current directory'
+      # uses: actions/checkout@v2
+      runs: pwd
