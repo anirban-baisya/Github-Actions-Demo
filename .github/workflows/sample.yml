@@ -1,4 +1,4 @@
-name: 'sample pipeline'  #giving name to the pipeline
+name: 'sample pipeline/workflow'  #giving name to the pipeline
 
 on:     
   push:
