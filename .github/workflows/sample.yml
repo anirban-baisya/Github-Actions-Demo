@@ -12,8 +12,8 @@ jobs:
     steps:
     - name: 'Print Hello World' #name of the step
       # uses: actions/checkout@v2
-      runs: echo 'hello world'
+      run: echo 'hello world'
 
     - name: 'Print current directory'
       # uses: actions/checkout@v2
-      runs: pwd
+      run: pwd
