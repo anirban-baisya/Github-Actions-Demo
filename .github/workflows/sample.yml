@@ -6,6 +6,16 @@ on:
       - master
       - main
 
+  pull_request:
+    branches:
+      - master
+      - main
+  workflow_dispatch: #this event add btn to git hub ui to trigger the pipeline/workflow manually
+    # inputs:
+    #   custom-input:
+    #     description: 'Custom input'
+    #     required: true    
+
 jobs:
   sampleJob: #defining name of the job
     runs-on: ubuntu-latest #defining OS and run the pipeline on ubuntu-latest
