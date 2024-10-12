@@ -17,11 +17,9 @@ jobs:
     runs-on: ubuntu-latest #defining OS and run the pipeline on ubuntu-latest
     steps:
     - name: 'Print Hello World' #name of the step
-      # uses: actions/checkout@v2
       run: echo 'hello world'
 
     - name: 'Print current directory'
-      # uses: actions/checkout@v2
       run: pwd # run is used for linux command to run
   #-------------->>> This below code is just only for node project setup <<------------------ 
     - name: 'Setup Node Js'
@@ -30,3 +28,9 @@ jobs:
         node-version: '20'
     - name: 'Check node version'
       run: node --version  
+
+    - name: 'Clone repo'
+      uses: actions/checkout@v3 #this plugin is going to do that , it will take the current github repo and clone it inside the github workflow runner machine
+
+    - name: 'List files in the repository'
+      run: ls
